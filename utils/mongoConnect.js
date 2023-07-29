@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
-import { MONGO_CONNECTION } from '../config/appConfig'
-import { infoLogger, errorLogger } from './winstonLogger'
+import { MONGO_CONNECTION } from '../config/appConfig.js'
+import { infoLogger, errorLogger } from './winstonLogger.js'
 
 export const mongoConnect = () => {
     mongoose.connect(MONGO_CONNECTION, {

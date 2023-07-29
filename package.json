@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Ecommerce de indumentaria deportiva",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "dev": "set NODE_ENV=development&& nodemon index.js",
+    "prod": "set NODE_ENV=production&& node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,5 +33,8 @@
     "express-session": "^1.17.3",
     "mongoose": "^7.4.0",
     "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

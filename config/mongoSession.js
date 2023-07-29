@@ -1,7 +1,7 @@
 import { session } from 'express-session'
 import { MongoStore } from 'connect-mongo'
 
-import { MONGO_CONNECTION, SECRET_SESSION, SESSION_MAX_AGE } from './appConfig'
+import { MONGO_CONNECTION, SECRET_SESSION, SESSION_MAX_AGE } from './appConfig.js'
 
 export const mongoSession = (app) => {
     app.use(

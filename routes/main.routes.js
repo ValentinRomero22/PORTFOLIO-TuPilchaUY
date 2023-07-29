@@ -1,11 +1,11 @@
-import { productRouter } from './product.routes'
-import { cartRouter } from './cart.routes'
-import { orderRouter } from './order.routes'
-import { loginOutRouter } from './loginOut.routes'
-import { signInRouter } from './signIn.routes'
-import { userRouter } from './user.routes'
-import { categoryRouter } from './category.routes'
-import { sizeRouter } from './size.routes'
+import { productRouter } from './product.routes.js'
+import { cartRouter } from './cart.routes.js'
+import { orderRouter } from './order.routes.js'
+import { loginOutRouter } from './loginOut.routes.js'
+import { signInRouter } from './signIn.routes.js'
+import { userRouter } from './user.routes.js'
+import { categoryRouter } from './category.routes.js'
+import { sizeRouter } from './size.routes.js'
 
 export { 
     productRouter,

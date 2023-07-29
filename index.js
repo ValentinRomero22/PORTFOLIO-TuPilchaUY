@@ -1,9 +1,9 @@
-import { express } from 'express'
+import express from 'express'
 import { createServer } from 'http'
 
-import { mongoConnect } from './utils/mongoConnect'
-import { PORT } from './config/appConfig'
-import { infoLogger, errorLogger } from './utils/winstonLogger'
+import { mongoConnect } from './utils/mongoConnect.js'
+import { PORT } from './config/appConfig.js'
+import { infoLogger, errorLogger } from './utils/winstonLogger.js'
 
 import {
     productRouter,
@@ -14,7 +14,7 @@ import {
     userRouter,
     categoryRouter,
     sizeRouter
-} from './routes/main.routes'
+} from './routes/main.routes.js'
 
 const app = express()
 const httpServer = createServer(app)
@@ -23,6 +23,8 @@ app.use((req, res, next) => {
     infoLogger.info(`URL: ${req.originalUrl} - METHOD: ${req.method}`)
     next()
 })
+
+mongoConnect()
 
 // configuración de jwt que debería de alguna forma enlazarse con la conexión de mongo...
 
