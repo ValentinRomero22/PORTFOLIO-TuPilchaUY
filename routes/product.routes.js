@@ -2,7 +2,7 @@ import { Router } from 'express'
 
 // importar controlador...
 
-import { isAuthenticated } from '../middlewares/isAuthenticated.js'
+import { verifyToken } from '../middlewares/verifyToken.js'
 
 const productRouter = Router()
 

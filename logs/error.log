@@ -1,0 +1,4 @@
+[26-08-2023 12:19:41, ERROR signInController.js | postSignIn(): TypeError: userModel.save is not a function]
+[26-08-2023 12:20:21, ERROR signInController.js | postSignIn(): Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client]
+[26-08-2023 13:25:55, ERROR signInController.js | postSignIn(): TypeError [ERR_HTTP_INVALID_HEADER_VALUE]: Invalid value "undefined" for header "auth-token"]
+[26-08-2023 13:26:32, ERROR signInController.js | postSignIn(): Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client]

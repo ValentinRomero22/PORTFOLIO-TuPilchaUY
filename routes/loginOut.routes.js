@@ -1,11 +1,7 @@
 import { Router } from 'express'
 
-// importar controlador...
+import { postLogin } from '../controllers/loginOutController.js'
 
-// import { isAuthenticated } from '../middlewares/isAuthenticated.js'
+export const loginOutRouter = Router()
 
-const loginOutRouter = Router()
-
-// loginOutRouter métodos
-
-export { loginOutRouter }
+loginOutRouter.post('/login', postLogin)

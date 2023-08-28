@@ -5,6 +5,8 @@ import { mongoConnect } from './utils/mongoConnect.js'
 import { PORT } from './config/appConfig.js'
 import { infoLogger, errorLogger } from './utils/winstonLogger.js'
 
+import cors from 'cors'
+
 import {
     productRouter,
     cartRouter,
@@ -17,6 +19,8 @@ import {
 } from './routes/main.routes.js'
 
 const app = express()
+app.use(express.json())
+app.use(cors())
 const httpServer = createServer(app)
 
 app.use((req, res, next) => {
@@ -25,8 +29,6 @@ app.use((req, res, next) => {
 })
 
 mongoConnect()
-
-// configuración de jwt que debería de alguna forma enlazarse con la conexión de mongo...
 
 app.use('/', productRouter)
 app.use('/', cartRouter)

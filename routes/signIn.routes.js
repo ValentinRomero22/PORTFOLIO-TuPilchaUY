@@ -1,11 +1,7 @@
 import { Router } from 'express'
 
-// importar controlador...
+import { postSignIn } from '../controllers/signInController.js'
 
-// import { isAuthenticated } from '../middlewares/isAuthenticated.js'
+export const signInRouter = Router()
 
-const signInRouter = Router()
-
-// signin métodos
-
-export { signInRouter }
+signInRouter.post('/signIn', postSignIn)
