@@ -1,11 +1,9 @@
 import { Router } from 'express'
 
-// importar controlador...
+import { updateImageUser } from '../controllers/userController.js'
 
 import { verifyToken } from '../middlewares/verifyToken.js'
 
-const userRouter = Router()
+export const userRouter = Router()
 
-// userRouter métodos
-
-export { userRouter }
+userRouter.put('/user/updateImage/:userId', updateImageUser)
